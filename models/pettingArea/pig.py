@@ -3,14 +3,19 @@ from datetime import date
 
 class Pig:
 
-    def __init__(self, name, species):
+    def __init__(self, name, species, shift, food):
         # Establish the properties of each animal
         # with a default value
         self.name = name
         self.species = species
         self.date_added = date.today()
         self.walking = True
+        self.shift = shift
+        self.food = food
 
-wilbur = Pig("Wilbur", "pot-bellied pig")
+    def feed(self):
+        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
 
-print(wilbur.name)
+# wilbur = Pig("Wilbur", "pot-bellied pig")
+
+# print(wilbur.name)
